@@ -37,7 +37,7 @@ public class VHS extends Movie {
 		
 	}
 	
-	private void rewind() {
+	public void rewind() {
 		this.currentTime = 0;
 	}
 	

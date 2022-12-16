@@ -16,7 +16,7 @@ public class BlockbusterTests {
         int expectedRuntime = 90;
         assertEquals(vhs.getTitle(), expectedTitle);
         assertEquals(vhs.getCategory(), expectedCategory);
-        assertEquals(vhs.getRuntime(), expectedRuntime);
+        assertEquals(vhs.getRunTime(), expectedRuntime);
 
         //Check play function increments runtime
         assertEquals(vhs.getCurrentTime(), 0);
@@ -38,10 +38,15 @@ public class BlockbusterTests {
     void testDVD() {
         //Check constructor functionality
         DVD dvd = new DVD("title", "category", 90, new ArrayList<String>(Arrays.asList("a","b","c")));
+        assertNotNull(dvd);
+        
         String expectedTitle = "title";
         int expectedRuntime = 90;
-        assertEquals(dvd.getTitle(), expectedTitle);
-        assertEquals(dvd.getRuntime(), expectedRuntime);
+        assertEquals(expectedTitle, dvd.getTitle());
+        assertEquals(expectedRuntime, dvd.getRunTime());
+        
+
+        
     }
 
 }
